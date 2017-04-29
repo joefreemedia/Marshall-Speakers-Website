@@ -1,0 +1,602 @@
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: SPOT - Free Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://blacktie.co
+ */
+ 
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@font-face {
+    font-family: 'amplify_personal_use_onlyRg';
+    src: url('../fonts/amplify_personaluseonly-webfont.woff2') format('woff2'),
+         url('../fonts/amplify_personaluseonly-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* OVERALL ASPECT */
+
+body {
+  background-color: #000;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    
+    margin-top: 70px;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #fff;
+}
+
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #f85c37;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+.navbar {
+	font-weight: 800;
+	font-size: 14px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/* Custom Logo Font */
+.logoFont {
+    font-family: 'amplify_personal_use_onlyRg';
+    font-size: 3.5em !important;
+    letter-spacing: 0 !important;
+    font-weight: 500 !important;
+    padding: 5px 15px 0px;
+}
+
+.logoSpeaker {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: .5px;
+    font-size: 0.48em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar-inverse {
+	background: #000;
+	border-color: #000;
+}
+
+/* Change Header nav links to white */
+.navbar-inverse .navbar-nav > li > a{
+    color:#fff;
+}
+.navbar-inverse .navbar-nav > .active > a {
+	background: #e72121
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: #e72121;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #da1a18;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-weight: bolder;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+.navbar-inverse .navbar-brand i {
+	color: #e72121;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+/* Dropdown Images */
+
+.dropdown-menu {
+    min-width: 350px;
+    padding: 0px;
+}
+
+.dropdown-menu .col-sm-6{
+    padding: 5px;
+}
+
+.dropdown-menu a .col-sm-6:hover, .dropdown-menu .col-sm-6:focus {
+    background-color: #e7e7e7;
+}
+
+.dropdown-menu a:nth-child(1) .col-sm-6:hover, .dropdown-menu a:nth-child(1) .col-sm-6:focus{
+    border-radius: 0 0 0 5px;
+}
+
+.dropdown-menu a:nth-child(2) .col-sm-6:hover, .dropdown-menu a:nth-child(2) .col-sm-6:focus{
+    border-radius: 0 0 5px 0px;
+}
+.dropdown-menu li{
+    list-style-type: none
+}
+
+.dropdown-header{
+    font-size: 15px;
+}
+
+.dropdown img{
+    width: 100%;
+    heigh: inherit;
+}
+
+/*TILT*/
+.tilt {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.tilt:hover {
+  -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+/* ==========================================================================
+   Wrap Sections
+   ========================================================================== */
+
+
+#headerwrap {
+	background: url(../img/stanmore_01.jpg) no-repeat center top;
+	margin-top: -10px;
+	padding-top:20px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 500px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+	margin-top: 100px;
+	color: white;
+	font-size: 70px;
+	font-weight: 300;
+	letter-spacing: 3px;
+}
+
+#headerwrap h2 {
+	color: white;
+	font-size: 40px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+/* Dark Grey Wrap */
+#dg {
+	background: #e0e0e0;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	text-align: center;
+}
+
+#dg h4 {
+	font-weight: 700;
+}
+
+/* Light Grey */
+#lg {
+	background: #ebebeb;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	text-align: center;
+}
+
+#lg h4 {
+	font-weight: 700;
+}
+
+/*Submit Button Edit for Homepage NewsFeed- Patryk */
+#newsletter{
+    width: 40%;
+    border: solid 3px white;
+    border-radius: 0.35em;
+    padding: 0.8em 2em 0.8em 2em;    
+}
+
+
+.button-news{
+    display: inline-block;
+    color: inherit;
+    background: none;
+    font-family: sans-serif;
+    oration: none;
+    border: solid 3px;
+    border-radius: 0.35em;
+    padding: 0.8em 2em 0.8em 2em;
+    cursor: pointer;
+    outline: 0;
+    
+}
+
+/* Red Wrap */
+#r {
+	background: #e72121;
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+
+#r h4 {
+	color: white;
+	font-weight: 700;
+}
+
+#r p {
+	color: white;
+}
+
+/* Blue Wrap */
+
+#blue {
+	background: #e72121;
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+
+#blue h4 {
+	color: white;
+	font-weight: 700;
+}
+
+#blue p {
+	color: white;
+}
+
+
+
+/* Footer Wrap */
+#f {
+	background: #2d2d2d;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#f i {
+	color: #bdbdbd;
+	font-size: 30px;
+	padding: 20px;
+}
+
+#f i:hover {
+	color: #e72121;
+}
+
+/****** SECTIONS *****/
+
+.w {
+	padding-top: 35px;
+}
+
+.w h4 {
+	font-weight: 700;
+}
+
+.w i {
+	color: #e72121;
+	font-size: 30px;
+}
+
+
+.wb {
+	padding-top: 35px;
+	margin-bottom: 0px;
+}
+
+.wb h4 {
+	font-weight: 700;
+}
+
+.desc {
+	padding-top: 35px;
+}
+
+.desc h4 {
+	font-weight: 700;
+}
+
+.desc i {
+	color: #e72121;
+	font-size: 12px;
+	padding: 5px;
+}
+
+/***** MODAL CONTACT *****/
+.modal-content {
+	border-radius: 0px;
+
+}
+
+.modal-header {
+	background: #bdbdbd;
+	color: white;
+}
+
+.modal-header h4 {
+	font-weight: 700;
+}
+
+.modal-body {
+	background: #f2f2f2;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+}
+
+#modalForms .infoForm, #modalForms .shopForm, #modalForms .supportForm, #modalForms .newsForm{
+    display:none;
+}
+#modalForms h2{
+    font-wieght: 300;
+    color:#555;
+}
+
+.modalLink i{
+	font-size: 2em;
+}
+
+.modalLink {
+    text-align:center;   
+}
+
+.modal-footer {
+	background: #f2f2f2;
+	margin-top: 0px; 
+}
+
+.modal-footer h2{
+    color:#000;
+}
+/*=======================
+Cart Window CSS 
+=========================*/
+
+#cartBox{
+    display:none;
+}
+.addToCart{
+    background: #fff;
+    color: #000;
+    padding: 10px 20px;
+    margin: 82px 0 0 0;
+    width: 100%;
+    height: 142px;
+}
+
+.addToCart h1{
+    color:#000;
+}
+
+/* ==========================================================================
+   Pricing Tables
+   ========================================================================== */
+   
+.pricing-option {
+    padding-bottom: 40px;
+}
+
+.pricing-option .pricing-top {
+    position: relative;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+
+    padding: 40px 20px 30px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pricing-option .pricing-top .special-label {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #1abc9c;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+.special .pricing-top {
+    background: black;
+}
+
+.pricing-option .pricing-edition {
+    text-transform: uppercase;
+    display: block;
+    font-size: 25px;
+    letter-spacing: 8px;
+}
+
+.pricing-option .price {
+    display: inline-block;
+    position: relative;
+}
+
+.pricing-option .price sup {
+    position: absolute;
+    top: 50px;
+    left: -10px;
+    font-size: 24px;
+}
+
+.pricing-option .price .price-amount {
+    font-size: 108px;
+    letter-spacing: -4px;
+}
+
+.pricing-option .price small {
+    position: relative;
+    left: -10px;
+    font-size: 18px;
+}
+
+.pricing-option ul {
+    list-style: none;
+    margin: 0;
+    background: #eee;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.pricing-option ul li {
+    border-bottom: solid 1px #e1e1e1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pricing-option .pricing-signup {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 10px;
+    color: white;
+    background: #1abc9c;
+}
+
+.pricing-option .pricing-signup:hover {
+    background: #e72121;
+}
+
+
+@media (min-width: 768px){
+.navbar-right .dropdown-menu {
+    right: -125px;
+    left: auto;
+}
+
+
+/*Landing page*/
+
+
+.landingPage .title, .landingPage h1,.landingPage  h3 ,.landingPage  p{
+  text-align: center;
+  
+}
+
+
+.landingPage .button {
+    background-color: #e72121;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+}
+
+@media (max-width: 767px){
+
+/* Resize images for mobile devices to 100% */
+
+p#pic img, .desc .centered img{
+    width: 100%;
+    height: auto;
+}   
+
+/* Resize modal form input size */
+
+#modalForms .col-sm-6{
+    width: 70%;
+    margin: 0 auto;
+}
+.modal-body .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+    
+}
